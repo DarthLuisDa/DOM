@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="lista">
+        <li id="primero">Lorem ipsum <b>dolor</b> sit amet consectetur 
+        </li>
+        <li>adipisicing elit. Culpa veniam </li>
+    </ol>
+
+    <script>
+       //Modificar el contenido de los elementos
+
+      /* var primerElemento = document.getElementById
+       ("primero");
+       primerElemento.innerHTML = "Nuevo <b>Texto</b>"; */
+
+       //Remplazar nodos del DOM
+
+       var elemento = document.createElement("li");
+       var contenido = document.createTextNode("Nuevo Texto");
+       elemento.appendChild(contenido);
+       var padre = document.getElementsByTagName("li")[0].
+       parentNode;
+       var referencia = document.getElementsByTagName
+       ("li")[0];
+       //padre.replaceChild(elemento, referencia);
+
+       //Eliminar
+       padre.removeChild(referencia);
+
+
+
+    </script>
+</body>
+</html>
